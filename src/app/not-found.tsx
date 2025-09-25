@@ -1,7 +1,16 @@
 // app/not-found.tsx
 import Link from "next/link";
 import styles from "./NotFound.module.css";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Страница не найдена",
+  description: "Ошибка 404: страница не найдена.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 export default function NotFound() {
   return (
     <div className={styles.container}>

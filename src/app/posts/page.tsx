@@ -6,7 +6,7 @@ import Link from "next/link";
 
 type Post = { id: number; title: string };
 
-export default function CSRPage() {
+export default function PostPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 

@@ -1,6 +1,19 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Главная",
+  description: "Добро пожаловать в тестовый проект на Next.js.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"}/`,
+  },
+  openGraph: {
+    title: "Главная | Test Frontend",
+    description: "Добро пожаловать в тестовый проект на Next.js.",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"}/`,
+  },
+};
 export default function Home() {
   return (
     <div className={styles.container}>

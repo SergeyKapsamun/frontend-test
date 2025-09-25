@@ -3,6 +3,27 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import styles from "./UserPage.module.scss";
 export const dynamic = "force-dynamic";
+import type { Metadata } from "next";
+
+type Props = { params: Promise<{ id: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const user = await getUser(id);
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+
+  return {
+    title: `Пользователь: ${user.name}`,
+    description: `Страница профиля пользователя ${user.name}.`,
+    alternates: { canonical: `${siteUrl}/users/${id}` },
+    openGraph: {
+      title: `Пользователь: ${user.name}`,
+      description: `Страница профиля пользователя ${user.name}.`,
+      url: `${siteUrl}/users/${id}`,
+    },
+  };
+}
 interface UserPageProps {
   params: Promise<{
     id: string;
