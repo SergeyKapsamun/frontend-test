@@ -1,0 +1,98 @@
+/* styles.module.css */
+.container {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.messagesContainer {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  background: #fafafa;
+}
+
+.messageWrapper {
+  margin-bottom: 8px;
+}
+
+.messageWrapperMe {
+  text-align: right;
+}
+
+.messageWrapperServer {
+  text-align: left;
+}
+
+.messageBubble {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.messageBubbleMe {
+  background: #0070f3;
+  color: #fff;
+}
+
+.messageBubbleServer {
+  background: #e5e5ea;
+  color: #000;
+}
+
+.link {
+  margin-left: 4px;
+  text-decoration: underline;
+}
+
+.linkMe {
+  color: #fff;
+}
+
+.linkServer {
+  color: #0070f3;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.button:active {
+  background: #004494;
+}
+.backLink {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #0070f3;
+  text-decoration: underline;
+}

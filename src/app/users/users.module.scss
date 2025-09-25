@@ -1,0 +1,114 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 2rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.updateInfo {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+.addButtonPremium {
+  background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(3, 105, 161, 0.3);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  // Иконка плюса
+  &::before {
+    content: "+";
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  // Эффект блеска при наведении
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 105, 161, 0.4);
+    background: linear-gradient(135deg, #075985 0%, #0284c7 100%);
+
+    &::after {
+      opacity: 1;
+      animation: shine 1s ease;
+    }
+  }
+}
+.controls {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 12px;
+  margin-left: 30px;
+}
+.backLink {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
